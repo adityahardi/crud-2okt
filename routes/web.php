@@ -17,7 +17,7 @@ Route::post('register', [App\Http\Controllers\AuthController::class, 'registerSt
 Route::middleware('auth')->group(function () {
     Route::middleware('can:admin')->group(function () {
         Route::get('admin', function () {
-            return 'admin';
+            return 'admin edited';
         });
         Route::resource('category', CategoryController::class);
         Route::resource('item', ItemController::class);
